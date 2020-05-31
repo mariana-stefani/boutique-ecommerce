@@ -10,3 +10,11 @@ body {
   color: #555;
   font-family: "Lato";
 }
+/* from Bulma */
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+}
