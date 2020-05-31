@@ -22,4 +22,4 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
