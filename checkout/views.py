@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
+from .models import OrderLineItem
+from products.models import Product
 from bag.context import bag_contents
 
 import stripe
