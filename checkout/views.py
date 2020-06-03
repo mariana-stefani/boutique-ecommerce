@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.conf import settings
@@ -38,7 +39,7 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'stripe_bublic_key',
+        'stripe_public_key': os.environ.get('STRIPE_PUBLIC_KEY', ''),
         'client_secret': intent.client_secret,
     }
 
