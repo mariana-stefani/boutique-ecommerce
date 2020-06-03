@@ -9,6 +9,7 @@ import stripe
 
 # Create your views here.
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -27,13 +28,18 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-    print(intent)
     order_form = OrderForm()
+    
+    if not stripe_public_key:
+        messages.warning(request, ('Stripe public key is missing. '
+                                   'Did you forget to set it in '
+                                   'your environment?'))
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_joiTeVm3lUyo6JwAHQozZqG300gNGu20Fu',
-        'client_secret': 'test client secret'
+        'stripe_public_key': 'stripe_bublic_key',
+        'client_secret': client_secret,
     }
 
     return render(request, template, context)
