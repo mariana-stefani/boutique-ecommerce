@@ -4,7 +4,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-{% endblock %}
+{% endblock extra_css%}
 
 {% block page_header %}
     <div class="container header-container">
@@ -12,7 +12,7 @@
             <div class="col"></div>
         </div>
     </div>
-{% endblock %}
+{% endblock page_header%}
 
 {% block content %}
     <div class="overlay"></div>
@@ -134,7 +134,7 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock content %}
 {% block postjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
