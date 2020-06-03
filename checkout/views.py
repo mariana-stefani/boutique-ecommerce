@@ -29,7 +29,7 @@ def checkout(request):
     )
 
     order_form = OrderForm()
-    
+
     if not stripe_public_key:
         messages.warning(request, ('Stripe public key is missing. '
                                    'Did you forget to set it in '
@@ -39,7 +39,7 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': 'stripe_bublic_key',
-        'client_secret': client_secret,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
