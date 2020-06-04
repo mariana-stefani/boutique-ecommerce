@@ -3,11 +3,13 @@
 {% load i18n %}
 {% load account %}
 
-{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock head_title %}
+{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
 
-{% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4">{% trans "Confirm E-mail Address" %}</h2>
+<hr>
 
 {% if confirmation %}
 
@@ -28,4 +30,4 @@
 
 {% endif %}
 
-{% endblock content %}
+{% endblock %}
