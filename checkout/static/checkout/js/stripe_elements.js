@@ -99,10 +99,10 @@ form.addEventListener("submit", function (ev) {
           if (result.error) {
             var errorDiv = document.getElementById("card-errors");
             var html = `
-                  <span class="icon" role="alert">
-                  <i class="fas fa-times"></i>
-                  </span>
-                  <span>${result.error.message}</span>`;
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
             $("#payment-form").fadeToggle(100);
             $("#loading-overlay").fadeToggle(100);
@@ -116,7 +116,7 @@ form.addEventListener("submit", function (ev) {
         });
     })
     .fail(function () {
-      // just rfeload the page, the error will be in djago messages
+      // just reload the page, the error will be in django messages
       location.reload();
     });
 });
