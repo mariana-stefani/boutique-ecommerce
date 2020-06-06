@@ -27,7 +27,7 @@ SECRET_KEY = 'z+f&zm(4srp8((+27$)jl6l0kh0tksx0ghrrm6u5vrfexq!ztw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fsf-boutique-ado.herokuapp.com', 'http://127.0.0.1:8000/']
 
 
 # Application definition
