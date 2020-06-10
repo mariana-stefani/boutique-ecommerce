@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
-import env.py
+import import_env_file
 
 
 if os.environ.get("DEV"):
