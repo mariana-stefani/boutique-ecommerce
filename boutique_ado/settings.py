@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
-import import_env_file
 
+if os.path.exists("env.py"):
+    import env
 
 if os.environ.get("DEV"):
     development = True
